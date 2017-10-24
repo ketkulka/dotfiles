@@ -1,6 +1,6 @@
 export TERM=xterm-256color
 
-export DOTFILES="/users/ketkulka/dotfiles"
+export DOTFILES="$HOME/dotfiles"
 
 # Setup environment, common to both bash and zsh
 shopt -s expand_aliases
