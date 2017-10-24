@@ -1,0 +1,26 @@
+alias cdicsp='cd /ws/ketkulka-sjc/work/icsp'
+alias h='history'
+alias l='ls -lrtha'
+alias ta='tmux attach-session -t '
+alias tl='tmux list-sessions'
+alias grep='grep --color'
+alias egrep='egrep --color'
+
+
+alias 'branch'='git branch'
+alias 'status'='git status'
+alias 'diff'='git diff'
+
+alias 'cdview'='cd /nobackup/ketkulka/views/'
+alias 'dusage'='du -sh * | sort -h'
+
+alias 'cdw'='cd /ws/ketkulka-sjc/work'
+
+alias 'myimageaudit'='/usr/cisco/bin/python2 imageaudit.py --7z /ws/ketkulka-sjc/work/viptela/imageaudit/imageaudit_src/p7zip/p7zip/bin/7z --images=imageaudit/bin --log=/tmp/diff.log --debug=DBG3 --diff=compressed'
+
+findlib ()
+{
+    for i in `ls`; do ldd $i 2>&1 | grep "$1" ; if [ $? -eq 0 ]; then echo $i; fi; done
+}
+
+

@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/users/ketkulka/dotfiles_bkup'
+let g:netrw_dirhist_2='/nobackup/ketkulka/views/v167/binos/prebuilt/hw-prgs/bundle/CC/10G'
+let g:netrw_dirhist_3='/nobackup/ketkulka/views/v167/binos/prebuilt/hw-prgs/bundle/CC/10G/CPLD'
+let g:netrw_dirhist_4='/nobackup/ketkulka/views/v167_1/binos/build'
+let g:netrw_dirhist_5='/nobackup/ketkulka/views/ketkulka-cedge/cedge_dev'

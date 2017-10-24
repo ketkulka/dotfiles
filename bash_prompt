@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+
+if tput setaf 1 &> /dev/null; then
+    tput sgr0; # reset colors
+    bold="\[$(tput bold)\]";
+#    italic="\[$(tput sitm)\]";
+    reset="\[$(tput sgr0)\]";
+    black="\[$(tput setaf 235)\]"
+    red="\[$(tput setaf 1)\]"
+    green="\[$(tput setaf 143)\]"
+    yellow="\[$(tput setaf 3)\]"
+    blue="\[$(tput setaf 66)\]"
+    purple="\[$(tput setaf 5)\]"
+    cyan="\[$(tput setaf 37)\]"
+    gray="\[$(tput setaf 246)\]"
+    white="\[$(tput setaf 223)\]"
+    orange="\[$(tput setaf 166)\]"
+    light_black="\[$(tput setaf 236)\]"
+fi;
+
+_sep="${gray} \[•\] ${reset}"
+_dir="${cyan}\w${reset}"
+_host="${italic}${orange}\H${reset}${_sep}";
+
+find_git_branch() {
+  # Based on: http://stackoverflow.com/a/13003854/170413
+  local branch
+  if branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null); then
+    if [[ "$branch" == "HEAD" ]]; then
+      branch='detached*'
+    fi
+    echo "${yellow}(${branch})${reset} "
+  else
+    echo ""
+  fi
+}
+
+find_git_dirty() {
+  local status=$(git status --porcelain 2> /dev/null)
+  if [[ "$status" != "" ]]; then
+    echo '*'
+  else
+    echo ''
+  fi
+}
+
+# Determine active Python virtualenv details.
+find_virtualenv() {
+    if test -z "$VIRTUAL_ENV" ; then
+        echo ""
+    else
+        echo "$cyan[`basename \"$VIRTUAL_ENV\"`] "
+    fi
+}
+
+# Highlight the user name when logged in as root.
+if [[ "$USER" != "ketkulka" ]]; then
+    user="${italic}${red}\u${reset}${_sep}";
+else
+    user="";
+fi;
+
+function prompt_command {
+    ret_code=$?
+    # Are we running in a shell invoked from Vim?
+    if [[ "$VIM" ]]; then
+        vim="${red}(Vim)${reset} "
+    else
+        vim=""
+    fi
+
+    # Did last command return non-zero value?
+    if [ "${ret_code}" != 0 ]; then
+        ret_str="${red}❯❯${reset} "
+    else
+        ret_str="${blue}❯${reset} "
+    fi
+
+    #PS1="\n\D{%T}${_sep}${user}${_host}${_dir}\n${vim}$(find_virtualenv)$(find_git_branch)${ret_str}"
+    PS1="\n\D{%T}${_sep}${user}${_host}${_dir}\n${vim}${ret_str}"
+}
+
+PROMPT_COMMAND="prompt_command;history -n; history -w; history -c; history -r"
+export PS2="${blue}.... ${reset}"

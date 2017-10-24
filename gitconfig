@@ -1,0 +1,50 @@
+[user]
+	name = Ketan Kulkarni
+	email = ketkulka@gmail.com
+[github]
+    user = ketkulka
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+    grep = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = cyan
+
+[log]
+    date = relative
+
+[alias]
+    s = status -s
+[filter "lfs"]
+    required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[show]
+	tool = vimdiff
+[mergetool "vimdiff"]
+	path = vim
+[credential]
+	helper = cache --timeout=31622400 --socket=/var/tmp/acme/.git_credentials/ketkulka/socket
