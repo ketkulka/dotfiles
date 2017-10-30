@@ -14,7 +14,13 @@ https://github.com/ronakg/dotfiles
 [ -f ~/dotfiles/bashrc_user ] && . ~/dotfiles/bashrc_user
 ```
 
-## Install Utilities if needed
+## Install Utilities if needed: This will also setup the required .files link
 ``` bash
 ~/dotfiles/install_utils.sh
+```
+
+## Once you open vim for the first time; do this 
+``` vim
+:PlugClean
+:PlugInstall
 ```

@@ -1,6 +1,6 @@
 " Vim-Plug {{
 try
-    source /users/ketkulka/.vim/vim-plug.vim
+    source $HOME/.vim/vim-plug.vim
 catch
     " It's okay
 endtry
