@@ -11,7 +11,7 @@ fi
 
 
 echo -e "Enter sudo passed if asked"
-sudo apt-get install tmux
+sudo apt-get install tmux cscope ctags
 
 ln -s $HOME/dotfiles/vim/vimrc $HOME/.vimrc
 ln -s $HOME/dotfiles/vim $HOME/.vim
