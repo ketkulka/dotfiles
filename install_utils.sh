@@ -13,7 +13,8 @@ fi
 echo -e "Enter sudo passed if asked"
 sudo apt-get install tmux
 
-ln -s $HOME/.vimrc $HOME/dotfiles/vim/vimrc
-ln -s $HOME/.vim $HOME/dotfiles/vim
-ln -s $HOME/.tmux.conf $HOME/dotfiles/tmux/tmux.conf
-ln -s $HOME/.tmux $HOME/dotfiles/tmux
+ln -s $HOME/dotfiles/vim/vimrc $HOME/.vimrc
+ln -s $HOME/dotfiles/vim $HOME/.vim
+ln -s $HOME/dotfiles/tmux/tmux.conf $HOME/.tmux.conf 
+ln -s $HOME/dotfiles/tmux $HOME/.tmux 
+ln -s $HOME/dotfiles/gitconfig $HOME/.gitconfig
