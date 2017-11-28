@@ -38,7 +38,7 @@ fi
 
 # FZF
 #export FZF_DEFAULT_COMMAND='ag -g "" --hidden --ignore .git'
-export FZF_DEFAULT_COMMAND='find . -path '*/\.*' -prune -o -type f -print -o -type l -print 2> /dev/null | sed s/^..//'
+#export FZF_DEFAULT_COMMAND='find . -path '*/\.*' -prune -o -type f -print -o -type l -print 2> /dev/null | sed s/^..//'
 export FZF_DEFAULT_OPTS='--reverse --color=fg+:221,hl+:1,hl:202'
 
 # cdf - change directory to selected file
