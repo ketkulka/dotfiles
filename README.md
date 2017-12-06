@@ -24,3 +24,7 @@ https://github.com/ronakg/dotfiles
 :PlugClean
 :PlugInstall
 ```
+
+## Make sure you install powerline fonts on your mac/pc so all the symbols shows up correctly
+Install it from here 
+https://github.com/powerline/fonts

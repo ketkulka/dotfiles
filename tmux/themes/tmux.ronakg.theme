@@ -22,8 +22,8 @@ active_no_bg='colour23'
 active_title_fg='colour232'
 active_no_fg='colour250'
 
-left_sep='◀'
-right_sep='▶'
+left_sep=''
+right_sep=''
 
 set-option -g status "on"
 
