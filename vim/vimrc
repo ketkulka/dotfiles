@@ -454,7 +454,7 @@ let g:startify_skiplist = [
 " }}
 
 " Ack.vim {{
-let g:ackprg = 'ag --vimgrep --smart-case --ignore=tags'
+let g:ackprg = 'rg --vimgrep'
 let g:ack_apply_qmappings = 0
 let g:ack_apply_lmappings = 0
 " }}
