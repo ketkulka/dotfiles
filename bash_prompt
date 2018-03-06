@@ -77,8 +77,9 @@ function prompt_command {
     fi
 
     #PS1="\n\D{%T}${_sep}${user}${_host}${_dir}\n${vim}$(find_virtualenv)$(find_git_branch)${ret_str}"
-    PS1="\n\D{%T}${_sep}${user}${_host}${_dir}\n${vim}${ret_str}"
+    PS1="\n\D{%T}${_sep}${user}${_host}${_dir}\n${vim}$(find_git_branch)${ret_str}"
 }
 
+#PROMPT_COMMAND="prompt_command;history -n; history -w; history -c; history -r"
 PROMPT_COMMAND="prompt_command;history -n; history -w; history -c; history -r"
 export PS2="${blue}.... ${reset}"

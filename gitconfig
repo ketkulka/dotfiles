@@ -21,11 +21,11 @@
     local = yellow
     remote = green
 
-[color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
+;[color "diff"]
+    ;meta = yellow bold
+    ;frag = magenta bold
+    ;old = red bold
+    ;new = green bold
 
 [color "status"]
     added = green
@@ -37,14 +37,23 @@
 
 [alias]
     s = status -s
+    l = log --date=iso
+    one-line = log --format='%Cred%h%Creset %Cgreen[%<(12,trunc)%aN]%Creset %Cgreen[%ai]%Creset %Cblue%<(50,trunc)%s%Creset'
+
 [filter "lfs"]
     required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+    process = git-lfs filter-process
+
 [show]
-	tool = vimdiff
+    tool = vimdiff
+
 [mergetool "vimdiff"]
-	path = vim
+    path = vim
+
 [credential]
-	helper = cache --timeout=31622400 --socket=/var/tmp/acme/.git_credentials/ketkulka/socket
+    helper = cache --timeout=31622400 --socket=/var/tmp/acme/.git_credentials/ketkulka/socket
+
+[push]
+    default = simple

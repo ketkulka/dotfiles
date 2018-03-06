@@ -49,6 +49,7 @@ Plug 'sickill/vim-pasta'
 Plug 'junegunn/rainbow_parentheses.vim'
 Plug 'python-mode/python-mode'
 "Plug 'davidhalter/jedi-vim'
+Plug 'ronakg/quickr-preview.vim'
 
 " Colorschemes
 Plug 'morhetz/gruvbox'
