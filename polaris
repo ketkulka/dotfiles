@@ -1,7 +1,20 @@
 export PATH=$PATH:/auto/ses/bin:/auto/binos-tools/bin/:/auto/ios-snaps/bin:/auto/polaris-pool-tools/bin
+export PATH=/auto/binos-tools/bin:/router/bin:/usr/cisco/bin:/auto/cedge-downloads/bin/maven-3.0.4/bin:/auto/cedge-downloads/bin/protoc:$PATH:/auto/sw/packages/ruby/2.1.1/bin:/usr/bin
+
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/auto/cedge-downloads/bin/protoc
 
 ott-upload ()
 {
     scp "$1" rtplabinfra1:/tftpboot/ketkulka/
     ssh rtplabinfra1 'chmod 777 /tftpboot/ketkulka/*'
+}
+
+scp-patch ()
+{
+    scp $1 tester@10.195.171.157://home/tester/
+}
+
+scp-csr-bin ()
+{
+    scp linkfarm/iso-ultra_cedge/*.SSA.bin root@172.19.215.158://bootflash/csr.bin
 }

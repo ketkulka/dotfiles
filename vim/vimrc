@@ -16,8 +16,13 @@ if !exists("g:os")
 endif
 " }}
 
+"if ($HOSTNAME == "sjc-ads-1921")
 let g:quickr_cscope_program = "gtags-cscope"
 let g:quickr_cscope_db_file = "GTAGS"
+"else
+    "let g:quickr_cscope_program = "cscope"
+    "let g:quickr_cscope_db_file = "cscope.out"
+"endif
 " Standard vim options {{
 set smartindent
 set autoindent
@@ -121,7 +126,7 @@ endif
 " issues
 let g:mapleader = "\<Space>"
 
-nnoremap <leader>m :Make<CR>
+nnoremap <leader>m :wa<CR>: cd obj-x86_64_cge7-vxe/fpmd/<CR>: make<CR>: cd ../../<CR>
 
 " Jump to start of function
 nnoremap ]] ]m
@@ -309,10 +314,10 @@ endif
 " }}
 
 " Compile_C {{
-function! Compile_C()
-    setlocal makeprg='gcc -g -Wall %'
-    Make!
-endfunction
+"function! Compile_C()
+    "setlocal makeprg='gcc -g -Wall %'
+    "Make!
+"endfunction
 " }}
 
 " Line Numbers {{
@@ -355,6 +360,7 @@ let g:gruvbox_improved_warnings=1
 let g:gruvbox_invert_selection=0
 let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
+"colorscheme default
 highlight LineNr guibg=#282828
 highlight CursorLine guibg=#282828
 highlight CursorColumn guibg=#1d2021
@@ -650,3 +656,5 @@ endfunction
 " Quicker save and quit
 "nnoremap <silent> e :call QuitBuffer()<CR>
 nnoremap <silent> e :bd<CR>
+" Search for opening { for a typical C function
+map [[ ?{<CR>w99[{:nohlsearch<CR>}]}]]

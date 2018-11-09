@@ -55,6 +55,9 @@ Plug 'ronakg/quickr-preview.vim'
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'micha/vim-colors-solarized'
+Plug 'chriskempson/base16-vim'
+
 if has('nvim')
     Plug 'brooth/far.vim'
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
