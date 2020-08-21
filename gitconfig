@@ -57,3 +57,5 @@
 
 [push]
     default = simple
+[core]
+	excludesfile = /users/ketkulka/dotfiles/gitignore_global

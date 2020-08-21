@@ -13,6 +13,7 @@ export TERM=xterm-256color
 # Aliases
 [ -f $DOTFILES/aliases.sh ] && . $DOTFILES/aliases.sh
 [ -f $DOTFILES/path_var.sh ] && . $DOTFILES/path_var.sh
+[ -f $DOTFILES/git-completion.bash ] && source $DOTFILES/git-completion.bash
 
 # Device specific settings should be in .bashrc_local
 #[ -f ~/.bashrc_local ] && . ~/.bashrc_local

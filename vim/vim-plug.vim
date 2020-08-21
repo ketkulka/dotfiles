@@ -57,6 +57,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'micha/vim-colors-solarized'
 Plug 'chriskempson/base16-vim'
+Plug 'airblade/vim-gitgutter'
 
 if has('nvim')
     Plug 'brooth/far.vim'
