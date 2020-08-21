@@ -1,0 +1,7 @@
+find . -name '*.c' -or -name '*.cc' -or -name '*.h' -or -name '*.x' -or -name '*.cli' -or -name '*.lsf' -or -name '*.cpp' -or -name '*.attr' | grep -v 'SCCS' | grep -v 'obj.linux-' > /tmp/.$UID.out
+
+echo "find done"
+
+cscope -b -q -u -i /tmp/.$UID.out
+
+cscope -d
