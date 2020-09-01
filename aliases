@@ -23,10 +23,3 @@ findlib ()
 {
     for i in `ls`; do ldd $i 2>&1 | grep "$1" ; if [ $? -eq 0 ]; then echo $i; fi; done
 }
-
-if [ $HOST == "sjc-ads-1921" ]
-then
-alias tmux='/users/ketkulka/bin/tmux'
-fi
-
-

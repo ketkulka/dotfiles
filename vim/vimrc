@@ -62,6 +62,7 @@ set wrapscan
 set autoread                         " automatically reload files changed outside of Vim
 set showcmd
 set nohidden
+set diffopt-=internal
 set diffopt+=context:5,vertical               " 5 lines of context in diff mode
 "set shortmess=atToOIc                 " To avoid the 'Hit Enter' prompts caused by the file messages
 set updatetime=750                   " Vim refresh time
@@ -91,7 +92,7 @@ if has('nvim')
 endif
 
 " set list
-" set diffopt+=iwhite                  " Ignore white space diff
+set diffopt+=iwhite                  " Ignore white space diff
 " }}
 
 if exists("&wildignorecase")
