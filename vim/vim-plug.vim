@@ -58,6 +58,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'micha/vim-colors-solarized'
 Plug 'chriskempson/base16-vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'preservim/nerdtree'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Plug 'Valloric/YouCompleteMe'
 
 if has('nvim')
     Plug 'brooth/far.vim'

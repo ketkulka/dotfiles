@@ -659,3 +659,7 @@ endfunction
 nnoremap <silent> e :bd<CR>
 " Search for opening { for a typical C function
 map [[ ?{<CR>w99[{:nohlsearch<CR>}]}]]
+" go formatting related
+let g:go_fmt_command = "goimports"
+set autowrite
+
