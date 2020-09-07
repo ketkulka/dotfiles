@@ -33,5 +33,8 @@ fi
 [ -f $DOTFILES/.fzf.bash ] && . $DOTFILES/.fzf.bash
 [ -f $DOTFILES/aliases ] && . $DOTFILES/aliases
 [ -f $DOTFILES/bash_prompt ] && . $DOTFILES/bash_prompt
-[ -f $DOTFILES/polaris ] && . $DOTFILES/polaris
+[ -f $DOTFILES/project ] && . $DOTFILES/project
+
+export PATH=$PATH:$DOTFILES/bin
+[ -f $HOME/.linuxbrew/bin/brew ] && eval $($HOME/.linuxbrew/bin/brew shellenv)
 
