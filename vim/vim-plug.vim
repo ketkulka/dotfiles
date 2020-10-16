@@ -19,7 +19,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Yggdroot/indentLine'
-"Plug 'ronakg/VimCompletesMe'
+Plug 'ronakg/VimCompletesMe'
 Plug 'ronakg/quickr-cscope.vim'
 Plug 'ronakg/quickr-preview.vim'
 "Plug 'brookhong/cscope.vim'
@@ -47,8 +47,8 @@ Plug 'roxma/vim-tmux-clipboard'
 "Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'sickill/vim-pasta'
 Plug 'junegunn/rainbow_parentheses.vim'
-Plug 'python-mode/python-mode'
-"Plug 'davidhalter/jedi-vim'
+"Plug 'python-mode/python-mode'
+Plug 'davidhalter/jedi-vim'
 Plug 'ronakg/quickr-preview.vim'
 
 " Colorschemes
@@ -61,6 +61,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 "Plug 'Valloric/YouCompleteMe'
+Plug 'vim-scripts/AutoComplPop'
 
 if has('nvim')
     Plug 'brooth/far.vim'

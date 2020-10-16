@@ -1,1 +1,5 @@
-export PATH=$PATH:$PWD/lineups/bin
+alias 'rg'='rg -g '\!build' -g '\!meta-*''
+
+alias allgits='for i in `ls`; do  [ -d $i/.git ] && echo $i ; done'
+alias alldiff='file=${RANDOM} && echo $file.diff && for i in `allgits`; do cd $i && git diff >> /tmp/$file.diff && cd - &>/dev/null; done'
+

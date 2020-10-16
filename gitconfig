@@ -58,4 +58,4 @@
 [push]
     default = simple
 [core]
-	excludesfile = /users/ketkulka/dotfiles/gitignore_global
+	excludesfile = ${HOME}/dotfiles/gitignore_global
