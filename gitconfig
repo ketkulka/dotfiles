@@ -56,6 +56,8 @@
     helper = cache --timeout=31622400 --socket=/var/tmp/acme/.git_credentials/ketkulka/socket
 
 [push]
-    default = simple
+	default = matching
 [core]
 	excludesfile = ~/dotfiles/gitignore_global
+[pull]
+	ff = only

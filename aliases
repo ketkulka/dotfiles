@@ -16,6 +16,8 @@ alias 'cdview'='cd /nobackup/ketkulka/views/'
 alias 'dusage'='du -sh * | sort -h'
 
 alias 'cdw'='cd /ws/ketkulka-sjc/work'
+alias 'gtags'='gtags -q'
+alias 'setw'='export PATH=$PATH:$PWD/lineups/bin/; export WK=$PWD'
 
 alias 'myimageaudit'='/usr/cisco/bin/python2 imageaudit.py --7z /ws/ketkulka-sjc/work/viptela/imageaudit/imageaudit_src/p7zip/p7zip/bin/7z --images=imageaudit/bin --log=/tmp/diff.log --debug=DBG3 --diff=compressed'
 
